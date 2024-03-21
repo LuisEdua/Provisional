@@ -1,7 +1,9 @@
 
 from models.Area import Area
+from database.database import session
+
+
 def listar(floor_uuid):
-    from database.database import session
     areas = session.query(Area).filter(Area.floor_uuid == floor_uuid).all()   
     response = []
     for area in areas:

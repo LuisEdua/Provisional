@@ -1,7 +1,8 @@
 
 from models.Floor import Floor
+from database.database import session
+
 def listar():
-    from database.database import session
     areas = session.query(Floor).all()   
     response = []
     for area in areas:
