@@ -4,7 +4,7 @@ from controllers import Floor
 
 
 
-DataRoutes = Blueprint("/floor", __name__)
+DataRoutes = Blueprint("floor", __name__)
 
 @DataRoutes.route('/floor/listar', methods=['GET'])
 def inciarAnalisis():    
